@@ -1,0 +1,821 @@
+> Number(5).toString();
+'5'
+> Number(5).toFixed(2);
+'5.00'
+> var list = [1, 2, 3, 4, 5];
+undefined
+> list.length;
+5
+> list.pop();
+5
+> list
+[ 1, 2, 3, 4 ]
+> list.pop
+[Function: pop]
+> Number(5).toString
+[Function: toString]
+> list.pop();
+4
+> list.pop().toString();
+'3'
+> list
+[ 1, 2 ]
+> list.pop().toString().length;
+1
+> list["pop"]
+[Function: pop]
+> don
+ReferenceError: don is not defined
+> var don = { name: "Don", email: "don@lighthouselabs.ca"};
+undefined
+> don
+{ name: 'Don', email: 'don@lighthouselabs.ca' }
+> var property = "email";
+undefined
+> property
+'email'
+> don.property
+undefined
+> don[property]
+'don@lighthouselabs.ca'
+> for (var i = 0; i < 5; i++) {
+... console.log(i);
+... }
+0
+1
+2
+3
+4
+undefined
+> list = [1, 2, 3, 4, 5];
+[ 1, 2, 3, 4, 5 ]
+> for (var i = 0; i < list.length; i++) {
+... console.log(list[i]);
+... }
+1
+2
+3
+4
+5
+undefined
+> don[property]
+'don@lighthouselabs.ca'
+> don["email"]
+'don@lighthouselabs.ca'
+> don[email]
+ReferenceError: email is not defined
+> don
+{ name: 'Don', email: 'don@lighthouselabs.ca' }
+> don."email"
+don."email"
+    ^^^^^^^
+
+SyntaxError: Unexpected string
+
+> don.email
+'don@lighthouselabs.ca'
+> var props = ["name", "email"];
+undefined
+> for (var i = 0; i < props.length; i++) {
+... console.log(don[props[i]])
+... }
+Don
+don@lighthouselabs.ca
+undefined
+> console.log("See?");
+See?
+undefined
+> var x = 10;
+undefined
+> 20 * 10
+200
+> don
+{ name: 'Don', email: 'don@lighthouselabs.ca' }
+> property
+'email'
+> don[property]
+'don@lighthouselabs.ca'
+> don["email"]
+'don@lighthouselabs.ca'
+> don.sayHello = function() { console.log("Hello"); };
+[Function]
+> don.sayHello
+[Function]
+> don.sayHello();
+Hello
+undefined
+> for (var i = 0; i < props.length; i++) {
+... console.log(don[props[i]]);
+... return "floop";
+return "floop";
+^^^^^^
+
+SyntaxError: Illegal return statement
+
+> }
+}
+^
+
+SyntaxError: Unexpected token }
+
+> var something = "foo";
+undefined
+> something()
+TypeError: something is not a function
+> function someFunc() { console.log("Hi");}
+undefined
+> someFunc
+[Function: someFunc]
+> someFunc("Whatever");
+Hi
+undefined
+> someFunc()
+Hi
+undefined
+> .exit
+➜  w1d3 node
+> var don = {
+... name: "Don",
+... email: "don@lighthouselabs.ca",
+... sayHi: function() {
+..... console.log("Hi!");
+..... }
+... };
+undefined
+> don
+{ name: 'Don',
+  email: 'don@lighthouselabs.ca',
+  sayHi: [Function: sayHi] }
+> don.name()
+TypeError: don.name is not a function
+> don.sayHi()
+Hi!
+undefined
+> var saveForLater = don.sayHi;
+undefined
+> saveForLater
+[Function: sayHi]
+> saveForLater()
+Hi!
+undefined
+> saveForLater = don.sayHi();
+Hi!
+undefined
+> saveForLater
+undefined
+> don.sayHello = function() { console.log(this.name + " says, 'Hello'
+don.sayHello = function() { console.log(this.name + " says, 'Hello'
+                                                    ^^^^^^^^^^^^^^^
+
+SyntaxError: Invalid or unexpected token
+
+> don.sayHello = function() { console.log(this.name + " says, 'Hello'");}
+[Function]
+> don.sayHello()
+Don says, 'Hello'
+undefined
+> function surprise() { console.log(this); }
+undefined
+> surprise()
+Object [global] {
+  DTRACE_NET_SERVER_CONNECTION: [Function],
+  DTRACE_NET_STREAM_END: [Function],
+  DTRACE_HTTP_SERVER_REQUEST: [Function],
+  DTRACE_HTTP_SERVER_RESPONSE: [Function],
+  DTRACE_HTTP_CLIENT_REQUEST: [Function],
+  DTRACE_HTTP_CLIENT_RESPONSE: [Function],
+  global: [Circular],
+  process:
+   process {
+     title: 'node',
+     version: 'v10.4.0',
+     versions:
+      { http_parser: '2.8.0',
+        node: '10.4.0',
+        v8: '6.7.288.43-node.7',
+        uv: '1.20.3',
+        zlib: '1.2.11',
+        ares: '1.14.0',
+        modules: '64',
+        nghttp2: '1.29.0',
+        napi: '3',
+        openssl: '1.1.0h',
+        icu: '61.1',
+        unicode: '10.0',
+        cldr: '33.0',
+        tz: '2018c' },
+     arch: 'x64',
+     platform: 'darwin',
+     release:
+      { name: 'node',
+        sourceUrl:
+         'https://nodejs.org/download/release/v10.4.0/node-v10.4.0.tar.gz',
+        headersUrl:
+         'https://nodejs.org/download/release/v10.4.0/node-v10.4.0-headers.tar.gz' },
+     argv: [ '/usr/local/Cellar/node/10.4.0/bin/node' ],
+     execArgv: [],
+     env:
+      { TERM_PROGRAM: 'Apple_Terminal',
+        SHELL: '/bin/zsh',
+        TERM: 'xterm-256color',
+        TMPDIR: '/var/folders/11/qx_hyvc55pz77v_yxg13kdch0000gn/T/',
+        Apple_PubSub_Socket_Render: '/private/tmp/com.apple.launchd.kwVQIqlA1C/Render',
+        TERM_PROGRAM_VERSION: '404',
+        TERM_SESSION_ID: 'F3191ADD-80FB-4365-AAFC-D502CA74F3FF',
+        USER: 'don',
+        SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.3rjOvB8jtS/Listeners',
+        PATH:
+         '/Users/don/.rvm/gems/ruby-2.4.1/bin:/Users/don/.rvm/gems/ruby-2.4.1@global/bin:/Users/don/.rvm/rubies/ruby-2.4.1/bin:/Users/don/.yarn/bin:/Users/don/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/don/.rvm/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/local/anaconda2/bin',
+        PWD: '/Users/don/dev/lighthouse/cohorts/2018/aug27/w1d3',
+        LANG: 'en_CA.UTF-8',
+        XPC_FLAGS: '0x0',
+        XPC_SERVICE_NAME: '0',
+        SHLVL: '1',
+        HOME: '/Users/don',
+        LOGNAME: 'don',
+        SECURITYSESSIONID: '186a7',
+        OLDPWD: '/Users/don/dev/lighthouse/cohorts/2018',
+        ZSH: '/Users/don/.oh-my-zsh',
+        PAGER: 'less',
+        LESS: '-R',
+        LC_CTYPE: 'en_CA.UTF-8',
+        LSCOLORS: 'Gxfxcxdxbxegedabagacad',
+        SQLBIN: '/Applications/Postgres.app/Contents/Versions/latest/bin',
+        ANDROID_HOME: '/usr/local/opt/android-sdk',
+        GOPATH: '/Users/don/dev/projects/go',
+        rvm_prefix: '/Users/don',
+        rvm_path: '/Users/don/.rvm',
+        rvm_bin_path: '/Users/don/.rvm/bin',
+        _system_type: 'Darwin',
+        _system_name: 'OSX',
+        _system_version: '10.13',
+        _system_arch: 'x86_64',
+        rvm_version: '1.29.2 (master)',
+        GEM_HOME: '/Users/don/.rvm/gems/ruby-2.4.1',
+        GEM_PATH:
+         '/Users/don/.rvm/gems/ruby-2.4.1:/Users/don/.rvm/gems/ruby-2.4.1@global',
+        MY_RUBY_HOME: '/Users/don/.rvm/rubies/ruby-2.4.1',
+        IRBRC: '/Users/don/.rvm/rubies/ruby-2.4.1/.irbrc',
+        RUBY_VERSION: 'ruby-2.4.1',
+        rvm_alias_expanded: '',
+        rvm_bin_flag: '',
+        rvm_docs_type: '',
+        rvm_gemstone_package_file: '',
+        rvm_gemstone_url: '',
+        rvm_niceness: '',
+        rvm_nightly_flag: '',
+        rvm_only_path_flag: '',
+        rvm_pretty_print_flag: '',
+        rvm_proxy: '',
+        rvm_quiet_flag: '',
+        rvm_ruby_bits: '',
+        rvm_ruby_file: '',
+        rvm_ruby_make: '',
+        rvm_ruby_make_install: '',
+        rvm_ruby_mode: '',
+        rvm_script_name: '',
+        rvm_sdk: '',
+        rvm_silent_flag: '',
+        rvm_use_flag: '',
+        rvm_wrapper_name: '',
+        rvm_hook: '',
+        _: '/usr/local/bin/node',
+        __CF_USER_TEXT_ENCODING: '0x1F5:0x0:0x52' },
+     pid: 9124,
+     features:
+      { debug: false,
+        uv: true,
+        ipv6: true,
+        tls_alpn: true,
+        tls_sni: true,
+        tls_ocsp: true,
+        tls: true },
+     ppid: 2834,
+     execPath: '/usr/local/Cellar/node/10.4.0/bin/node',
+     debugPort: 9229,
+     _startProfilerIdleNotifier: [Function: _startProfilerIdleNotifier],
+     _stopProfilerIdleNotifier: [Function: _stopProfilerIdleNotifier],
+     _getActiveRequests: [Function: _getActiveRequests],
+     _getActiveHandles: [Function: _getActiveHandles],
+     reallyExit: [Function: reallyExit],
+     abort: [Function: abort],
+     chdir: [Function: chdir],
+     cwd: [Function: cwd],
+     umask: [Function: umask],
+     getuid: [Function: getuid],
+     geteuid: [Function: geteuid],
+     setuid: [Function: setuid],
+     seteuid: [Function: seteuid],
+     setgid: [Function: setgid],
+     setegid: [Function: setegid],
+     getgid: [Function: getgid],
+     getegid: [Function: getegid],
+     getgroups: [Function: getgroups],
+     setgroups: [Function: setgroups],
+     initgroups: [Function: initgroups],
+     _kill: [Function: _kill],
+     _debugProcess: [Function: _debugProcess],
+     _debugEnd: [Function: _debugEnd],
+     hrtime: [Function: hrtime],
+     cpuUsage: [Function: cpuUsage],
+     dlopen: [Function: dlopen],
+     uptime: [Function: uptime],
+     memoryUsage: [Function: memoryUsage],
+     _rawDebug: [Function],
+     moduleLoadList:
+      [ 'Binding contextify',
+        'NativeModule events',
+        'NativeModule internal/async_hooks',
+        'NativeModule internal/errors',
+        'Binding uv',
+        'Binding buffer',
+        'Binding async_wrap',
+        'Binding config',
+        'Binding icu',
+        'NativeModule util',
+        'NativeModule internal/encoding',
+        'NativeModule internal/util',
+        'Binding constants',
+        'Binding util',
+        'NativeModule internal/util/types',
+        'Internal Binding types',
+        'NativeModule buffer',
+        'NativeModule internal/buffer',
+        'NativeModule internal/process',
+        'NativeModule assert',
+        'NativeModule internal/assert',
+        'NativeModule fs',
+        'NativeModule path',
+        'NativeModule internal/constants',
+        'Binding fs',
+        'NativeModule stream',
+        'NativeModule internal/streams/pipeline',
+        'NativeModule internal/streams/end-of-stream',
+        'NativeModule internal/streams/legacy',
+        'NativeModule _stream_readable',
+        'NativeModule internal/streams/buffer_list',
+        'NativeModule internal/streams/destroy',
+        'NativeModule internal/streams/state',
+        'NativeModule _stream_writable',
+        'NativeModule _stream_duplex',
+        'NativeModule _stream_transform',
+        'NativeModule _stream_passthrough',
+        'Binding fs_event_wrap',
+        'NativeModule internal/fs/utils',
+        'NativeModule internal/url',
+        'NativeModule internal/querystring',
+        'Binding url',
+        'NativeModule internal/validators',
+        'NativeModule internal/process/warning',
+        'NativeModule internal/process/next_tick',
+        'NativeModule internal/process/promises',
+        'NativeModule internal/fixed_queue',
+        'NativeModule internal/process/stdio',
+        'Binding performance',
+        'Binding trace_events',
+        'NativeModule internal/inspector_async_hook',
+        'Binding inspector',
+        'NativeModule timers',
+        'Binding timer_wrap',
+        'NativeModule internal/linkedlist',
+        'NativeModule internal/timers',
+        'NativeModule internal/modules/cjs/loader',
+        'NativeModule vm',
+        'NativeModule internal/modules/cjs/helpers',
+        'NativeModule console',
+        'Binding tty_wrap',
+        'NativeModule tty',
+        'NativeModule net',
+        'NativeModule internal/net',
+        'Binding cares_wrap',
+        'Binding stream_wrap',
+        'Binding tcp_wrap',
+        'Binding pipe_wrap',
+        'NativeModule internal/stream_base_commons',
+        'NativeModule internal/tty',
+        'Binding signal_wrap',
+        'NativeModule internal/repl',
+        'NativeModule readline',
+        'NativeModule internal/readline',
+        'NativeModule repl',
+        'NativeModule domain',
+        'NativeModule async_hooks',
+        'Internal Binding domain',
+        'NativeModule internal/util/inspector',
+        'NativeModule inspector',
+        'NativeModule os',
+        'NativeModule internal/os',
+        'Binding os',
+        'NativeModule string_decoder',
+        'Internal Binding string_decoder' ],
+     binding: [Function: binding],
+     _linkedBinding: [Function: _linkedBinding],
+     _events:
+      { newListener: [Array],
+        removeListener: [Array],
+        warning: [Function],
+        SIGWINCH: [Array] },
+     _eventsCount: 4,
+     _maxListeners: undefined,
+     _fatalException: [Function],
+     domain: [Getter/Setter],
+     _exiting: false,
+     assert: [Function: deprecated],
+     config: { target_defaults: [Object], variables: [Object] },
+     setUncaughtExceptionCaptureCallback: [Function],
+     hasUncaughtExceptionCaptureCallback: [Function],
+     emitWarning: [Function],
+     nextTick: [Function: nextTick],
+     _tickCallback: [Function: _tickCallback],
+     stdout: [Getter],
+     stderr: [Getter],
+     stdin: [Getter],
+     openStdin: [Function],
+     exit: [Function],
+     kill: [Function],
+     argv0: 'node' },
+  Buffer:
+   { [Function: Buffer]
+     poolSize: 8192,
+     from: [Function: from],
+     of: [Function: of],
+     alloc: [Function: alloc],
+     allocUnsafe: [Function: allocUnsafe],
+     allocUnsafeSlow: [Function: allocUnsafeSlow],
+     isBuffer: [Function: isBuffer],
+     compare: [Function: compare],
+     isEncoding: [Function: isEncoding],
+     concat: [Function: concat],
+     byteLength: [Function: byteLength],
+     [Symbol(kIsEncodingSymbol)]: [Function: isEncoding] },
+  clearImmediate: [Function: clearImmediate],
+  clearInterval: [Function: clearInterval],
+  clearTimeout: [Function: clearTimeout],
+  setImmediate:
+   { [Function: setImmediate] [Symbol(util.promisify.custom)]: [Function] },
+  setInterval: [Function: setInterval],
+  setTimeout:
+   { [Function: setTimeout] [Symbol(util.promisify.custom)]: [Function] },
+  don:
+   { name: 'Don',
+     email: 'don@lighthouselabs.ca',
+     sayHi: [Function: sayHi],
+     sayHello: [Function] },
+  saveForLater: undefined,
+  surprise: [Function: surprise] }
+undefined
+> don.surprise = surprise;
+[Function: surprise]
+> var joel = {name: "Joel", email: "joel@lighthouselabs.ca", surprise: surprise};
+undefined
+> don.surprise();
+{ name: 'Don',
+  email: 'don@lighthouselabs.ca',
+  sayHi: [Function: sayHi],
+  sayHello: [Function],
+  surprise: [Function: surprise] }
+undefined
+> joel.surprise();
+{ name: 'Joel',
+  email: 'joel@lighthouselabs.ca',
+  surprise: [Function: surprise] }
+undefined
+> surprise()
+Object [global] {
+  DTRACE_NET_SERVER_CONNECTION: [Function],
+  DTRACE_NET_STREAM_END: [Function],
+  DTRACE_HTTP_SERVER_REQUEST: [Function],
+  DTRACE_HTTP_SERVER_RESPONSE: [Function],
+  DTRACE_HTTP_CLIENT_REQUEST: [Function],
+  DTRACE_HTTP_CLIENT_RESPONSE: [Function],
+  global: [Circular],
+  process:
+   process {
+     title: 'node',
+     version: 'v10.4.0',
+     versions:
+      { http_parser: '2.8.0',
+        node: '10.4.0',
+        v8: '6.7.288.43-node.7',
+        uv: '1.20.3',
+        zlib: '1.2.11',
+        ares: '1.14.0',
+        modules: '64',
+        nghttp2: '1.29.0',
+        napi: '3',
+        openssl: '1.1.0h',
+        icu: '61.1',
+        unicode: '10.0',
+        cldr: '33.0',
+        tz: '2018c' },
+     arch: 'x64',
+     platform: 'darwin',
+     release:
+      { name: 'node',
+        sourceUrl:
+         'https://nodejs.org/download/release/v10.4.0/node-v10.4.0.tar.gz',
+        headersUrl:
+         'https://nodejs.org/download/release/v10.4.0/node-v10.4.0-headers.tar.gz' },
+     argv: [ '/usr/local/Cellar/node/10.4.0/bin/node' ],
+     execArgv: [],
+     env:
+      { TERM_PROGRAM: 'Apple_Terminal',
+        SHELL: '/bin/zsh',
+        TERM: 'xterm-256color',
+        TMPDIR: '/var/folders/11/qx_hyvc55pz77v_yxg13kdch0000gn/T/',
+        Apple_PubSub_Socket_Render: '/private/tmp/com.apple.launchd.kwVQIqlA1C/Render',
+        TERM_PROGRAM_VERSION: '404',
+        TERM_SESSION_ID: 'F3191ADD-80FB-4365-AAFC-D502CA74F3FF',
+        USER: 'don',
+        SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.3rjOvB8jtS/Listeners',
+        PATH:
+         '/Users/don/.rvm/gems/ruby-2.4.1/bin:/Users/don/.rvm/gems/ruby-2.4.1@global/bin:/Users/don/.rvm/rubies/ruby-2.4.1/bin:/Users/don/.yarn/bin:/Users/don/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/don/.rvm/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/local/anaconda2/bin',
+        PWD: '/Users/don/dev/lighthouse/cohorts/2018/aug27/w1d3',
+        LANG: 'en_CA.UTF-8',
+        XPC_FLAGS: '0x0',
+        XPC_SERVICE_NAME: '0',
+        SHLVL: '1',
+        HOME: '/Users/don',
+        LOGNAME: 'don',
+        SECURITYSESSIONID: '186a7',
+        OLDPWD: '/Users/don/dev/lighthouse/cohorts/2018',
+        ZSH: '/Users/don/.oh-my-zsh',
+        PAGER: 'less',
+        LESS: '-R',
+        LC_CTYPE: 'en_CA.UTF-8',
+        LSCOLORS: 'Gxfxcxdxbxegedabagacad',
+        SQLBIN: '/Applications/Postgres.app/Contents/Versions/latest/bin',
+        ANDROID_HOME: '/usr/local/opt/android-sdk',
+        GOPATH: '/Users/don/dev/projects/go',
+        rvm_prefix: '/Users/don',
+        rvm_path: '/Users/don/.rvm',
+        rvm_bin_path: '/Users/don/.rvm/bin',
+        _system_type: 'Darwin',
+        _system_name: 'OSX',
+        _system_version: '10.13',
+        _system_arch: 'x86_64',
+        rvm_version: '1.29.2 (master)',
+        GEM_HOME: '/Users/don/.rvm/gems/ruby-2.4.1',
+        GEM_PATH:
+         '/Users/don/.rvm/gems/ruby-2.4.1:/Users/don/.rvm/gems/ruby-2.4.1@global',
+        MY_RUBY_HOME: '/Users/don/.rvm/rubies/ruby-2.4.1',
+        IRBRC: '/Users/don/.rvm/rubies/ruby-2.4.1/.irbrc',
+        RUBY_VERSION: 'ruby-2.4.1',
+        rvm_alias_expanded: '',
+        rvm_bin_flag: '',
+        rvm_docs_type: '',
+        rvm_gemstone_package_file: '',
+        rvm_gemstone_url: '',
+        rvm_niceness: '',
+        rvm_nightly_flag: '',
+        rvm_only_path_flag: '',
+        rvm_pretty_print_flag: '',
+        rvm_proxy: '',
+        rvm_quiet_flag: '',
+        rvm_ruby_bits: '',
+        rvm_ruby_file: '',
+        rvm_ruby_make: '',
+        rvm_ruby_make_install: '',
+        rvm_ruby_mode: '',
+        rvm_script_name: '',
+        rvm_sdk: '',
+        rvm_silent_flag: '',
+        rvm_use_flag: '',
+        rvm_wrapper_name: '',
+        rvm_hook: '',
+        _: '/usr/local/bin/node',
+        __CF_USER_TEXT_ENCODING: '0x1F5:0x0:0x52' },
+     pid: 9124,
+     features:
+      { debug: false,
+        uv: true,
+        ipv6: true,
+        tls_alpn: true,
+        tls_sni: true,
+        tls_ocsp: true,
+        tls: true },
+     ppid: 2834,
+     execPath: '/usr/local/Cellar/node/10.4.0/bin/node',
+     debugPort: 9229,
+     _startProfilerIdleNotifier: [Function: _startProfilerIdleNotifier],
+     _stopProfilerIdleNotifier: [Function: _stopProfilerIdleNotifier],
+     _getActiveRequests: [Function: _getActiveRequests],
+     _getActiveHandles: [Function: _getActiveHandles],
+     reallyExit: [Function: reallyExit],
+     abort: [Function: abort],
+     chdir: [Function: chdir],
+     cwd: [Function: cwd],
+     umask: [Function: umask],
+     getuid: [Function: getuid],
+     geteuid: [Function: geteuid],
+     setuid: [Function: setuid],
+     seteuid: [Function: seteuid],
+     setgid: [Function: setgid],
+     setegid: [Function: setegid],
+     getgid: [Function: getgid],
+     getegid: [Function: getegid],
+     getgroups: [Function: getgroups],
+     setgroups: [Function: setgroups],
+     initgroups: [Function: initgroups],
+     _kill: [Function: _kill],
+     _debugProcess: [Function: _debugProcess],
+     _debugEnd: [Function: _debugEnd],
+     hrtime: [Function: hrtime],
+     cpuUsage: [Function: cpuUsage],
+     dlopen: [Function: dlopen],
+     uptime: [Function: uptime],
+     memoryUsage: [Function: memoryUsage],
+     _rawDebug: [Function],
+     moduleLoadList:
+      [ 'Binding contextify',
+        'NativeModule events',
+        'NativeModule internal/async_hooks',
+        'NativeModule internal/errors',
+        'Binding uv',
+        'Binding buffer',
+        'Binding async_wrap',
+        'Binding config',
+        'Binding icu',
+        'NativeModule util',
+        'NativeModule internal/encoding',
+        'NativeModule internal/util',
+        'Binding constants',
+        'Binding util',
+        'NativeModule internal/util/types',
+        'Internal Binding types',
+        'NativeModule buffer',
+        'NativeModule internal/buffer',
+        'NativeModule internal/process',
+        'NativeModule assert',
+        'NativeModule internal/assert',
+        'NativeModule fs',
+        'NativeModule path',
+        'NativeModule internal/constants',
+        'Binding fs',
+        'NativeModule stream',
+        'NativeModule internal/streams/pipeline',
+        'NativeModule internal/streams/end-of-stream',
+        'NativeModule internal/streams/legacy',
+        'NativeModule _stream_readable',
+        'NativeModule internal/streams/buffer_list',
+        'NativeModule internal/streams/destroy',
+        'NativeModule internal/streams/state',
+        'NativeModule _stream_writable',
+        'NativeModule _stream_duplex',
+        'NativeModule _stream_transform',
+        'NativeModule _stream_passthrough',
+        'Binding fs_event_wrap',
+        'NativeModule internal/fs/utils',
+        'NativeModule internal/url',
+        'NativeModule internal/querystring',
+        'Binding url',
+        'NativeModule internal/validators',
+        'NativeModule internal/process/warning',
+        'NativeModule internal/process/next_tick',
+        'NativeModule internal/process/promises',
+        'NativeModule internal/fixed_queue',
+        'NativeModule internal/process/stdio',
+        'Binding performance',
+        'Binding trace_events',
+        'NativeModule internal/inspector_async_hook',
+        'Binding inspector',
+        'NativeModule timers',
+        'Binding timer_wrap',
+        'NativeModule internal/linkedlist',
+        'NativeModule internal/timers',
+        'NativeModule internal/modules/cjs/loader',
+        'NativeModule vm',
+        'NativeModule internal/modules/cjs/helpers',
+        'NativeModule console',
+        'Binding tty_wrap',
+        'NativeModule tty',
+        'NativeModule net',
+        'NativeModule internal/net',
+        'Binding cares_wrap',
+        'Binding stream_wrap',
+        'Binding tcp_wrap',
+        'Binding pipe_wrap',
+        'NativeModule internal/stream_base_commons',
+        'NativeModule internal/tty',
+        'Binding signal_wrap',
+        'NativeModule internal/repl',
+        'NativeModule readline',
+        'NativeModule internal/readline',
+        'NativeModule repl',
+        'NativeModule domain',
+        'NativeModule async_hooks',
+        'Internal Binding domain',
+        'NativeModule internal/util/inspector',
+        'NativeModule inspector',
+        'NativeModule os',
+        'NativeModule internal/os',
+        'Binding os',
+        'NativeModule string_decoder',
+        'Internal Binding string_decoder' ],
+     binding: [Function: binding],
+     _linkedBinding: [Function: _linkedBinding],
+     _events:
+      { newListener: [Array],
+        removeListener: [Array],
+        warning: [Function],
+        SIGWINCH: [Array] },
+     _eventsCount: 4,
+     _maxListeners: undefined,
+     _fatalException: [Function],
+     domain: [Getter/Setter],
+     _exiting: false,
+     assert: [Function: deprecated],
+     config: { target_defaults: [Object], variables: [Object] },
+     setUncaughtExceptionCaptureCallback: [Function],
+     hasUncaughtExceptionCaptureCallback: [Function],
+     emitWarning: [Function],
+     nextTick: [Function: nextTick],
+     _tickCallback: [Function: _tickCallback],
+     stdout: [Getter],
+     stderr: [Getter],
+     stdin: [Getter],
+     openStdin: [Function],
+     exit: [Function],
+     kill: [Function],
+     argv0: 'node' },
+  Buffer:
+   { [Function: Buffer]
+     poolSize: 8192,
+     from: [Function: from],
+     of: [Function: of],
+     alloc: [Function: alloc],
+     allocUnsafe: [Function: allocUnsafe],
+     allocUnsafeSlow: [Function: allocUnsafeSlow],
+     isBuffer: [Function: isBuffer],
+     compare: [Function: compare],
+     isEncoding: [Function: isEncoding],
+     concat: [Function: concat],
+     byteLength: [Function: byteLength],
+     [Symbol(kIsEncodingSymbol)]: [Function: isEncoding] },
+  clearImmediate: [Function: clearImmediate],
+  clearInterval: [Function: clearInterval],
+  clearTimeout: [Function: clearTimeout],
+  setImmediate:
+   { [Function: setImmediate] [Symbol(util.promisify.custom)]: [Function] },
+  setInterval: [Function: setInterval],
+  setTimeout:
+   { [Function: setTimeout] [Symbol(util.promisify.custom)]: [Function] },
+  don:
+   { name: 'Don',
+     email: 'don@lighthouselabs.ca',
+     sayHi: [Function: sayHi],
+     sayHello: [Function],
+     surprise: [Function: surprise] },
+  saveForLater: undefined,
+  surprise: [Function: surprise],
+  joel:
+   { name: 'Joel',
+     email: 'joel@lighthouselabs.ca',
+     surprise: [Function: surprise] } }
+undefined
+> don.surprise();
+{ name: 'Don',
+  email: 'don@lighthouselabs.ca',
+  sayHi: [Function: sayHi],
+  sayHello: [Function],
+  surprise: [Function: surprise] }
+undefined
+> var kv = {name: "KV", email: "kv@lighthouselabs.ca"}
+undefined
+> kv.surprise()
+TypeError: kv.surprise is not a function
+> kv.surprise
+undefined
+> kv.this
+undefined
+> don.this
+undefined
+> joel.this
+undefined
+> Object.values(don);
+[ 'Don',
+  'don@lighthouselabs.ca',
+  [Function: sayHi],
+  [Function],
+  [Function: surprise] ]
+> Object.keys(don);
+[ 'name', 'email', 'sayHi', 'sayHello', 'surprise' ]
+> var lighthouse = {
+... address: "401 W Georgia St",
+... city: "Vancouver",
+... instructors: [don, joel, kv]
+... };
+undefined
+> lighthouse.instructors[1].email
+'joel@lighthouselabs.ca'
+> var kitchen = {
+... cupboards: [ { shelves: [["salt", "pepper", "masala", "montreal steak spice"], ["coffee filters", "paper towels", "ziploc bags"]]}
+... }
+}
+^
+
+SyntaxError: Unexpected token }
+
+> cupboards: [ { shelves: [["salt", "pepper", "masala", "montreal steak spice"], ["coffee filters", "paper towels", "ziploc bags"]]}]
+[ { shelves: [ [Array], [Array] ] } ]
+> 
