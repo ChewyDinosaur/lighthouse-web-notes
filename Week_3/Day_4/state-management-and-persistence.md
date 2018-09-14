@@ -1,4 +1,4 @@
-#Week 3 Day 4: State Management and Persistence
+# Week 3 Day 4: State Management and Persistence
 
 The stream recording didn't end up working, but you can scroll through old lectures to see the nearly identical lecture I did ~5 months ago.
 
