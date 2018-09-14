@@ -121,4 +121,4 @@ Content-Length: 0
 
 # Node API demo
 For this demo, we wrote a small app to connect to Spotify and search for artists.
-[Gist](https://mandrillapp.com/track/click/30244704/gist.github.com?p=eyJzIjoiajZxNmpoRGtUaExKZDhUWGt3NzV5WG92U29jIiwidiI6MSwicCI6IntcInVcIjozMDI0NDcwNCxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2dpc3QuZ2l0aHViLmNvbVxcXC9Kb2VsQ29kZXNcXFwvMGYxZTY4ZTkzZjVhZjBhN2Q1ZWExZGFjMWZmNDc1MjlcIixcImlkXCI6XCI4MTUyMDE4YWViNWM0Y2NiODZjMzQxNDljMmFlZmIzN1wiLFwidXJsX2lkc1wiOltcIjA0OGFmMTY1ZjgzNTdmYjVmZDBhNTFhNzUyMTQwYjA3YWRmM2UyNTRcIl19In0)
+[Gist](https://gist.github.com/JoelCodes/0f1e68e93f5af0a7d5ea1dac1ff47529)
