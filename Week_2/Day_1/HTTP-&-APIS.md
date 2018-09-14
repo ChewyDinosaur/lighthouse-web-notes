@@ -1,20 +1,20 @@
-##HTTP and APIs
+## HTTP and APIs
 
-#An HTTP Request Walks Into a Browser...
+# An HTTP Request Walks Into a Browser...
 
 Today's lecture is going to be about finding more and more specific answers to one question:
 
 What happens when you type google.ca into your browser?
 
-##Muggle's Answer
+## Muggle's Answer
 
 A web page loads.
 
-##Slightly Less Muggly Answer
+## Slightly Less Muggly Answer
 
 Your browser makes an HTTP Request, and some server somewhere makes an HTTP Response.
 
-###Wait... what's HTTP?
+### Wait... what's HTTP?
 
 Hypertext Transfer Protocol. Sent on the TCP / IP
 
@@ -31,9 +31,9 @@ HTTP Messages generally have:
 * HTTP is stateless 
 * HTTP is resource-based
 
-##HTTP Requests
+## HTTP Requests
 
-###HTTP Methods
+### HTTP Methods
 
 * GET - read-only
 * POST - for making changes
@@ -42,7 +42,7 @@ HTTP Messages generally have:
 * PATCH - updates a resource by defining changes (no one can agree on what that means)
 The strange limitations of HTML confine us to GET and POST this week. That will not always be the case.
 
-###URL
+### URL
 
 Protocol: 'http://' Domain: localhost:1234 URI: /poodles
 
@@ -76,9 +76,9 @@ Content-Type: application/x-www-form-urlencoded
 
 name=joel
 ```
-##HTTP Responses
+## HTTP Responses
 
-###Status Codes
+### Status Codes
 
 * 100 - Networky dark magics
 * 200 - OK
@@ -115,10 +115,10 @@ Date: Mon, 03 Sep 2018 16:59:55 GMT
 Connection: keep-alive
 Content-Length: 0
 ```
-##But... how does it know where to go?
+## But... how does it know where to go?
 
-###DNS (Domain Name Server)
+### DNS (Domain Name Server)
 
-#Node API demo
+# Node API demo
 For this demo, we wrote a small app to connect to Spotify and search for artists.
 [Gist](https://mandrillapp.com/track/click/30244704/gist.github.com?p=eyJzIjoiajZxNmpoRGtUaExKZDhUWGt3NzV5WG92U29jIiwidiI6MSwicCI6IntcInVcIjozMDI0NDcwNCxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2dpc3QuZ2l0aHViLmNvbVxcXC9Kb2VsQ29kZXNcXFwvMGYxZTY4ZTkzZjVhZjBhN2Q1ZWExZGFjMWZmNDc1MjlcIixcImlkXCI6XCI4MTUyMDE4YWViNWM0Y2NiODZjMzQxNDljMmFlZmIzN1wiLFwidXJsX2lkc1wiOltcIjA0OGFmMTY1ZjgzNTdmYjVmZDBhNTFhNzUyMTQwYjA3YWRmM2UyNTRcIl19In0)
